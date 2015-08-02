@@ -3,13 +3,13 @@ package de.canitzp.snaploader;
 import net.minecraft.launchwrapper.IClassTransformer;
 import net.minecraft.launchwrapper.ITweaker;
 import net.minecraft.launchwrapper.LaunchClassLoader;
-
+import org.objectweb.asm.*;
 import java.io.File;
 import java.util.List;
 
 public class SnapLoader implements ITweaker, IClassTransformer {
 
-    private byte[] transformEntityItem(byte[] classbytes){
+    private byte[] transformTest(byte[] classbytes){
         Strings.logger.info("Started!");
         return classbytes;
     }
@@ -36,6 +36,6 @@ public class SnapLoader implements ITweaker, IClassTransformer {
 
     @Override
     public byte[] transform(String s, String s1, byte[] bytes) {
-        return transformEntityItem(bytes);
+        return transformTest(bytes);
     }
 }
