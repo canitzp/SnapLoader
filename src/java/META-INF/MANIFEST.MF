@@ -1,0 +1,4 @@
+Manifest-Version: 1.0
+TweakClass: de.canitzp.snaploader.transformer.Tweaker
+MeddleAPI-Mods: de.canitzp.snaploader.Snaploader
+
