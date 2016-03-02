@@ -25,6 +25,8 @@ public class SaveIDs {
 
     public Map read(){
         try {
+            if (!id.getParentFile().exists()) id.getParentFile().mkdirs();
+            if (!id.exists()) id.createNewFile();
             ObjectInputStream ois = new ObjectInputStream(new FileInputStream(id));
             Map<String, Integer> idMap = (Map) ois.readObject();
             ois.close();
